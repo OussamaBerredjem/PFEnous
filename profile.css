@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    font-family: sans-serif;
+    background-color: aliceblue;
+  }
+
+.profile-container {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* Adjust width as needed */
+    padding: 10px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.header{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.profile-picture {
+    width: 5cm;
+    height: 5cm;
+   
+    border-radius: 20px;
+}
+
+.edit-profile-button{
+    background-color: orange;
+    color: aliceblue;
+    height: 1.5cm;
+    max-width: 5cm;
+    min-width: 3cm;
+    font-size: large;
+    transition: 1s;
+   
+}
+
+.edit-profile-button:hover{
+    transform: scale(1.1);
+     border-width: 0px;
+    border-color: aliceblue;
+}
+
+.remove-profile-button{
+    margin-left: 20px;
+    background-color: green;
+    color: aliceblue;
+    height: 1.5cm;
+    min-width: 3cm;
+    max-width: 5cm;
+    font-size: large;
+    transition: 1s;
+   
+}
+
+.remove-profile-button:hover{
+    transform: scale(1.1);
+     border-width: 0px;
+    border-color: aliceblue;
+}
+
+
+
+.info-container {
+    margin-left: 10px;
+}
+
+.info-container h2 {
+    margin-bottom: 10px;
+}
+
+.info-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-container li {
+    margin-bottom: 5px;
+    min-width: 6.5cm;
+}
+
+.action-buttons {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+    justify-content: end;
+}
+
+.action-buttons button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tabley{
+    margin-top: 30px;
+    justify-content: space-around;
+    border: none;
+
+    
+}
+
+.table-t {
+    
+    background-color: rgb(247, 193, 92);
+    justify-content: space-around;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+td,th {
+    padding: 10px; /* Add padding to cells */
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    border-radius: 12px;
+    text-shadow: -0.7px 0 black, 0 0.7px black, 0.7px 0 black, 0 -0.7px black; /* Create a black "border" around the text */
+
+    
+}
+
+tr{
+    border: none; /* Add a thin border to cells */
+    justify-content: center;
+    text-align: center;
+    font-weight:500;
+    color: aliceblue;
+
+    
+}
+
+.t{
+    font-weight: 500;
+}
+
+.bord-right{
+    border-right: 1px solid white;
+}
+
+.bord-bottom{
+    border-bottom: 1px solid white;
+}
+
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    padding-bottom: 1cm;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.dialog.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dialog .content {
+    /* Add styling for the content inside the dialog if needed */
+    opacity: 1;
+    background-color: rgb(80, 80, 80,0.89);
+    color: azure;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: margin 0.5s ease-out;
+
+    margin-bottom: -100%;
+    
+}
+
+.back{
+    height: 1.2cm;
+    width: 1.2cm;
+    border-radius: 100%;
+    background-color: rgb(202, 229, 252);
+    margin-top: 0.6cm;
+    margin-left: 1cm;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+}
+
+.dialog2 .content{
+    opacity: 1;
+    background-color: rgb(80, 80, 80,0.89);
+    color: azure;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 30px;
+    margin-bottom: -100%;
+    transition: margin 0.5s ease-out;
+    text-align: center;
+}
+
+ .show{
+    visibility: visible;
+    opacity: 1;
+}
+
+

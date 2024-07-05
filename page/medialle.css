@@ -1,0 +1,163 @@
+body,html{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: aliceblue;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.info h1{
+    margin-right: auto;
+    margin-left: -1cm;
+}
+
+.back {
+    height: 1.2cm;
+    width: 1.2cm;
+    border-radius: 50%;
+    background-color: rgb(202, 229, 252);
+    margin-right: auto; /* Push the back button to the left */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1cm;
+
+}
+
+
+
+.item{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 22px;
+    border: 1px solid gray;
+    padding-bottom: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+
+.item .head{
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    padding-left: 4%;
+
+}
+
+.item .head .icon{
+    height: 2.5cm;
+    width: 2.5cm;
+    background-image: url("../image/medaille.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
+.item .head .title{
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.item p{
+    margin-left: 7%;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.container .info{
+    width: 100%;
+    margin-right: -100%;
+    transition: margin 0.5s;
+    height: 100vh;
+    overflow: auto;
+}
+
+
+
+.list{
+    display: flex;
+    flex-direction: column;
+    padding: 0% 5%;
+    overflow: auto;
+    width: 90%;
+    height: 100vh;
+    overflow: auto;
+    transition: margin 0.5s;
+    margin-left: 0%;
+    visibility: inherit;
+}
+
+/* info table */
+
+table {
+    border-collapse: collapse;
+    width:98%;
+    margin: 0px 10px;
+}
+
+table th{
+    padding: 20px 2px;
+    text-align: left;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    
+}
+
+table td{
+    border: 1px solid #ddd;
+    background-color:aliceblue;
+    padding: 20px 2px;
+    text-align: left;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+table th {
+    background-color: orange;
+    color: white;
+    border-top: none;
+}
+
+table tbody tr:nth(even) {
+    background-color: #f7f6f6;
+}
+
+table tbody tr:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+
+
+#Status{
+    border-top-right-radius: 8px;
+    border-right: none;
+}
+#nom{
+    border-top-left-radius: 8px;
+    border-left: none;
+}

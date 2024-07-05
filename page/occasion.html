@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Tab Bar Example</title>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+
+        table {
+            border-collapse: collapse;
+            width:98%;
+            margin: 0px 10px;
+        }
+
+        table th{
+            padding: 20px 2px;
+            text-align: left;
+            font-size: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+            
+        }
+
+        table td{
+            border: 1px solid #ddd;
+            background-color:aliceblue;
+            padding: 20px 2px;
+            text-align: left;
+            font-size: 15px;
+            text-align: center;
+        
+        }
+
+        table th {
+            background-color: orange;
+            color: white;
+            border-top: none;
+        }
+
+        table tbody tr:nth(even) {
+            background-color: #f7f6f6;
+        }
+
+        table tbody tr:hover {
+            background-color: rgb(225, 225, 225);
+        }
+
+    
+
+        #Status{
+            border-top-right-radius: 8px;
+            border-right: none;
+        }
+        #nom{
+            border-top-left-radius: 8px;
+            border-left: none;
+        }
+
+    .profile-picture {
+    width: 5cm;
+    height: 5cm;
+   border-radius: 20px;
+    }
+    .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+     /* Adjust width as needed */
+    padding: 10px 30px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.imprime{
+    position: absolute;
+    top: 1cm;
+    right: 1cm;
+}
+
+.imprime button{
+    padding: 12px 40px;
+    background-color: orange;
+    border: none;
+    border-radius: 12px;
+    color:white;
+    outline: none;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.sign{
+   margin-top: 2cm;
+   margin-left: 90%;
+   margin-bottom: 1cm;
+}
+
+@media print {
+body {
+    -webkit-print-color-adjust: exact;
+}
+}
+
+    </style>
+  
+
+</head>
+<body>
+
+    <div class="imprime">
+        <button id="imp">Imprimer&nbsp;&nbsp;<i class="fa-solid fa-print"></i></button>
+    </div>
+    <div class="list">
+        <div class="profile-container">
+            
+            <img src="../sonatrach/sonatrach5.jpg" class="profile-picture">
+        </div>
+        <b>Sonatrach</b>
+        <b>DIRECTION GENERALE</b>
+        <b>Direction Corporate Ressources Humaines</b>
+        <b>Direction IAP</b>
+        <b>Direction Gestion du Personnel</b>
+        <b>N°&nbsp;&nbsp;&nbsp;&nbsp;/DCP-RHU/IAP/GPR/2024</b>
+        <br>
+        <b>Grafitications medailles pour la ceremonie du <span id="dates">31 DECEMBER 2024</span></b>
+        <br>
+
+
+
+    </div>
+  <table>
+    <thead>
+        <tr>
+            <th id="nom">Code Direction</th>
+            <th >Direction</th>
+            <th id="matricule">Matricule</th>
+            <th>Nom</th>
+            <th id="prenom">Prénom</th>
+            <th>Montant Brut</th>
+            <th>IRG</th>
+            <th>Net a payer</th>
+            
+
+            <!--<th id="codeS">Code Structure</th>
+            <th id="numero">Numéro de Compte</th>
+            <th id="fonction">Fonction</th>
+            <th id="dateN">Date de Naissance</th>
+            <th id="dateR">Date de Recrutement</th>-->
+           
+
+            <th id="medailleProchaine">Observation</th>
+            <th>Date de Recrutement</th>
+            <th id="Status">Compte RIP/RIB</th>
+
+        
+
+            
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        
+       
+        
+        <!-- Ajoutez plus de lignes ici si nécessaire -->
+    </tbody>
+</table>
+
+<div class="sign">
+    <p>Signature</p>
+    <b style="margin-left: 0.9cm;">.</b>
+</div>
+<script src="occasion.js">
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

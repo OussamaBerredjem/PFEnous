@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="conges.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container-fluid fixed-search">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="input-group mb-3 ">
+                    <input type="text" class="form-control" placeholder="Search for something..." aria-label="Search" aria-describedby="button-search" id="search">
+                </div>
+            </div>
+    
+            <div class="filtre-container">
+                <div id="filtre">
+                    <i class="fas fa-sliders" style="color: grey;padding-top: 0.29cm;"></i>
+                    <b style="font-size: 20px;color: grey;margin-left: 0.2cm;">filtrer par</b>
+                </div>
+    
+                <select class="filtre" style="width:auto;" aria-label="Default select example" id="select">
+                    <option value="1"><b>nom</b></option>
+                    <option value="2"><b>prenom</b></option>
+                    <option value="3"><b>matricule</b></option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <button class="add" id="sho"><b>Ajouter une Conges</b></button>
+    </div>
+
+    <div class="data pt-3">
+        <table class="table table-bordered" id="tab">
+            <tr class="tab-pane text-center text-white" style="background-color: orange;">
+                <th id="nj">
+                    Nom
+                </th>
+                <th>
+                    Prenom
+                </th>
+                <th>
+                    Matricule
+                </th>
+                <th>
+                    Type
+                </th>
+                <th>
+                    Date debut
+                </th>
+                <th>
+                    Date fin
+                </th>
+                <th>
+                    Duration
+                </th>
+                <th id="rj">
+                    Reste
+                </th>
+            </tr>
+
+        </table>
+    </div>
+
+    
+
+    <div class="dialog" id="dialog">
+        <div class="col-lg-8 content" id="dc">
+            <div style="display: flex;flex-direction:column;">
+                
+                <h3 style="text-align: center;">Ajouter Conges</h3>
+                <div class="form-group mt-2">
+                    <label for="matricule">Matricule:</label>
+                    <input type="text" class="form-control" id="matricule" placeholder="Entrez employee matricule">
+                
+                
+
+                <div class="form-row justify-content-sm-around">
+                    <div class="form-group" style="width: 48%;">
+                    <label for="date_naissance">Date de debut :</label>
+                    <input type="date" class="form-control" id="date_naissance">
+                </div>
+                <div class="form-group" style="width: 48%;">
+                    <label for="date_recrutement">Date de fin :</label>
+                    <input type="date" class="form-control" id="date_recrutement">
+                </div>
+                </div>
+
+                <div class="form-group" id="dyt" style="transition: height 0.2s ease-out;height: 1.8cm;">
+
+                    <label for="selectOption">Conges type :</label>
+    
+    
+                    <select class="form-control" id="selectOption" placeholder="Other option">
+                        <option value="1" style="display: none;">Select une option...</option>
+                        
+                        <option value="Maladie inférieure ou = 30 jours">Maladie inférieure ou = 30 jours </option>
+                        <option value="Maladie supérieure 30 jours">Maladie supérieure 30 jours</option>
+                        <option value="Maladie professionnelle">Maladie professionnelle</option>
+                        <option value="Accident de travail">Accident de travail</option>
+                        <option value="Maternité">Maternité</option>
+                        <option value="Période de détachement( service national)">Période de détachement( service national)/option>
+                        <option value="Période de détachement( rappel dans le cadre de la réserve)">Période de détachement( rappel dans le cadre de la réserve)</option>
+                        <option value="Période de détachement sans solde (demande de la société)">Période de détachement sans solde (demande de la société)</option>
+                        <option value="Période de détachement sans solde (demande du travailleur)">Période de détachement sans solde (demande du travailleur)</option>
+                        <option value="Période de formation,recyclage(demande de la société)">Période de formation,recyclage(demande de la société)</option>
+                        <option value="Absences autorisées par CCE">Absences autorisées par CCE</option>
+                        <option value="Conges rémunérés par CCE">Conges rémunérés par CCE </option>
+                        <option value="Conges sans solde inferieur ou= 30 jours">Conges sans solde inferieur ou= 30 jours </option>
+                        <option value="Absences sans solde inferieur ou= 30 jours">Absences sans solde inferieur ou= 30 jours </option>
+                        <option value="Période d'activité temporaire avant recrutement">Période d'activité temporaire avant recrutement</option>
+    
+                        <option value="">Autre</option>
+                      </select>
+    
+                      <div class="form-group" id="customInput" style="display: none;margin-top: 0.1cm;transition: opacity 0.2s ease-out;opacity: 0;">
+                        <label for="customText">Ajouter Autre Type:</label>
+    
+                        <input type="text" class="form-control" id="customText" placeholder="Enter autre type">
+                      </div>
+    
+                </div>
+
+                <div class="d-flex mt-1" style="margin-left: 0.3cm;">
+                    <b>Congés Validé ? </b>
+                    <div class="form-check" style="margin-left: 1cm;margin-right: 0.5cm;">
+                      <input class="form-check-input" type="radio" name="congesValide" id="congesoui" value="oui">
+                      <label class="form-check-label" for="congesOui">
+                        Oui
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="congesValide" id="congesnon" value="non">
+                      <label class="form-check-label" for="congesNon">
+                        Non
+                      </label>
+                    </div>
+                  </div>
+
+
+
+                </div>
+                
+                <div class="row justify-content-around mt-2">
+                    <button class="btn btn-outline-light" style="width: 47%;" id="anuller">Anuller</button>
+                    <button class="btn btn-success" style="width: 47%;" id="ajouter">Ajouter</button>
+                </div>
+            </form>
+        </div>
+     </div>
+ </div>
+ <script src="conges.js"></script>
+ 
+</body>
+</html>

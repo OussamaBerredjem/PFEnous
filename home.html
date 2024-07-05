@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="home.css">
+  <title>Sonatrach IAP</title>
+</head>
+<body>
+    <section>
+  <div class="login-container" id="logc">
+    <img src="sonatrach/sonatrach6.jpg" alt="" width="50px" height="40px">
+    <h1>Welcome to Sonatrach IAP</h1>
+    <div>
+      <div class="input-container">
+        <br>
+        <br>
+        <label for="username"><i><strong>Email:</strong></i></label>
+        <input type="text" class="username" id="usernamez" name="username" placeholder="Enter your email">
+      </div>
+      <div class="input-container">
+          <label for="password"><i><strong>Password:</strong></i></label>
+          <div style="width: 100%; position: relative;">
+            <input type="password" class="password" id="passwordz" name="password" style="width: 100%; padding-right: 32px;" placeholder="Enter your password">
+        </div>
+        <a href="#rest-password" id="showr">forget pssword ?</a>
+        </div>
+      <button id="loginz">Login</button>
+      </div>
+  </div>
+ 
+  <div class="restp" id="restp" style="display: none;width: 100%;">
+    <br>
+    <br>
+    <h1>Rest Password</h1>
+    <div class="input-container">
+      <br>
+      <br>
+      <label for="username"><i><strong>Email :</strong></i></label>
+      <input type="text" class="username" id="rusername" name="username" placeholder="Enter your username">
+    </div>
+    <div class="input-container">
+        <label for="rpassword"><i><strong>Password:</strong></i></label>
+        <div style="width: 100%; position: relative;">
+          <input type="password" class="password" id="rpassword" name="password" style="width: 100%; padding-right: 32px;" placeholder="Enter your password">
+      </div>
+      <div class="input-container">
+        <label for="rcpassword"><i><strong>Confirm Password:</strong></i></label>
+        <div style="width: 100%; position: relative;">
+          <input type="password" class="password" id="rcpassword" name="password" style="width: 72vh; padding-right: 32px;" placeholder="Enter your password again">
+      </div>
+      <a href="#login" id="hidr">Back to Login ?</a>
+
+      <br>
+      <div class="shut">
+        <button id="restsend">Reset Password </button>
+
+      </div>
+
+  </div>
+</section>
+
+
+
+
+<script>
+  
+  var loginz = document.getElementById("loginz");
+
+  var pass = document.getElementById("passwordz")
+  var use = document.getElementById("usernamez")
+
+  var showr = document.getElementById("showr")
+  var hidr = document.getElementById("hidr")
+  
+  var logc = document.getElementById("logc")
+  var restp = document.getElementById('restp')
+
+  var restsend = document.getElementById("restsend")
+  var rcpassword = document.getElementById("rcpassword")
+  var rpassword = document.getElementById('rpassword')
+  var rusername = document.getElementById('rusername')
+  var request = new XMLHttpRequest();
+
+
+  restsend.onclick = function (params) {
+    var rp = rpassword.value
+    var crp = rcpassword.value
+    var ru = rusername.value
+    if(rp==""||crp==''||rp==''){
+      alert('entrer tout les information')
+    }else
+      if(rp == crp){
+        request.open("GET","http://localhost/PFEnous/php/requests.php?reset=hh&email="+ru,true);
+        request.onreadystatechange = function (params) {
+          if(this.status == 200 && this.readyState ==4){
+            var r = JSON.parse(this.responseText);
+            if(r.length >0){
+              request.open("GET","http://localhost/PFEnous/php/requests.php?id="+r[0]['id']+"&password="+rp,true);
+              request.send()
+              localStorage.setItem("isLogin",true);
+              window.location.href = "dashboard.html"
+     
+            }else{
+              alert('no match email account find')
+            }
+          }
+        }
+        request.send();
+      }else{
+      alert('confirm password incorrect')
+    }
+  }
+
+  showr.onclick = function (params) {
+    restp.style.display = ''
+    logc.style.display = 'none'
+  }
+
+  hidr.onclick = function (params) {
+    logc.style.display = ''
+    restp.style.display = 'none'
+  }
+
+  var isLogin = localStorage.getItem("isLogin");
+  if(isLogin=="true"){
+    window.location.href = "dashboard.html"; 
+  }else{
+
+  }
+
+loginz.onclick = function (event) {
+    
+    var usernamez = document.getElementById("usernamez").value;
+    var passwordz = document.getElementById("passwordz").value;
+
+
+    request.open("GET","http://localhost/PFEnous/php/requests.php?log=hu&email="+usernamez+"&password="+passwordz,true);
+        request.onreadystatechange = function (params) {
+          if(this.status == 200 && this.readyState ==4){
+            
+            var r = "";
+
+            try {
+              
+              var r = JSON.parse(request.responseText);
+              
+              
+              if(r.length >0){
+              localStorage.setItem("isLogin",true);
+              window.location.href = "dashboard.html"
+     
+            }else{
+              alert('no match account found')
+            }
+            } catch (error) {
+             alert(error)
+            }
+            
+           
+          }
+        }
+        request.send();
+
+
+   
+};
+
+
+  </script>
+
+</body>
+</html>

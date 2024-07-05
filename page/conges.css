@@ -1,0 +1,136 @@
+.header{
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+body,html{
+    background-color: transparent;
+    overflow: auto;
+}
+
+.header .add{
+    width: 94%;
+    height: 1.2cm;
+    border-radius: 6px;
+    background-color: orange;
+    border: none;
+    border-color: transparent;
+    color: aliceblue;
+    transition: 200ms;
+    margin-top: 2cm;
+    margin-left: 0.5cm;
+    outline: none;
+}
+
+.header .add:hover{
+    
+    cursor: pointer;
+
+}
+
+/* data */
+
+.data{
+    display: flex;
+    justify-content: center;
+}
+
+.data .table{
+    width: 98%;
+}
+
+/* dialog */
+
+.dialog {
+    position: fixed;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    backdrop-filter: blur(1px);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    padding-left: 1cm;
+    z-index: 3000;
+    }
+
+.dialog.show {
+    visibility: visible;
+}
+
+#nj{
+    border-top-left-radius: 8px;
+}
+
+#rj{
+    border-top-right-radius: 8px;
+}
+
+.dialog .content {
+    /* Add styling for the content inside the dialog if needed */
+    opacity: 1;
+    background-color: rgb(80, 80, 80,0.89);
+    color: white;
+    padding: 30px 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: top 0.5s ease-in-out, height 0.5s ease-out;
+    height: 85%;
+    position: fixed;
+    top: 100%;
+}
+
+/*  search */
+
+
+
+.filtre{
+    cursor: pointer;
+    width: 1cm;
+    height: 1cm;
+    font-size: 20px;
+    margin-left: 0cm;
+    padding-bottom: 0.1cm;
+    font-weight: bold;color: grey;
+    background-color: transparent;
+    border: none !important;
+    
+    
+    }
+    
+    .filtre:focus {
+    border: 0px solid transparent !important;
+    outline: none;
+    }
+   
+    select #selectOption {
+        direction: ltr; /* Set direction to left-to-right (default) */
+      }
+    
+    
+.filtre-container{
+    padding-left: 0.4cm;
+    height: 1cm;
+    width: 25%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    display:flex;
+    flex-direction: row;
+    }
+    
+    
+    .fixed-search {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background:aliceblue;
+    
+            padding: 15px;
+        }

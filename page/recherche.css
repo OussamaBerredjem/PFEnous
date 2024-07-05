@@ -1,0 +1,72 @@
+body{
+    background-color: aliceblue;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: orange; 
+    border-radius: 6px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: aliceblue; 
+  }
+  
+
+
+.filtre{
+cursor: pointer;
+width: min-content;
+height: 1cm;
+font-size: 20px;
+margin-left: 0cm;
+padding-bottom: 0.1cm;
+font-weight: bold;color: grey;
+background-color: transparent;
+border: none !important;
+
+}
+
+.filtre:focus {
+border: 0px solid transparent !important;
+outline: none;
+}
+
+
+
+.filtre-container{
+padding-left: 1cm;
+height: 1cm;
+width: 7.5cm;
+border-radius: 8px;
+border: 1px solid grey;
+display:flex;
+flex-direction: row;
+}
+
+
+.fixed-search {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background:aliceblue;
+
+        padding: 15px;
+    }
+
+    .bottom-head {
+        position: relative;
+        top: 1cm;
+        overflow-y: auto; 
+         
+    }
+
+    .card_txt{
+      display: flex;
+    }

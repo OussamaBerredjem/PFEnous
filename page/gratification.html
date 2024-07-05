@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="conges.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container-fluid fixed-search">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="input-group mb-3 ">
+                    <input type="text" class="form-control" placeholder="Search for something..." aria-label="Search" aria-describedby="button-search" id="search">
+                </div>
+            </div>
+    
+            <div class="filtre-container">
+                <div id="filtre">
+                    <i class="fas fa-sliders" style="color: grey;padding-top: 0.29cm;"></i>
+                    <b style="font-size: 20px;color: grey;margin-left: 0.2cm;">filtrer par</b>
+                </div>
+    
+                <select class="filtre" style="width:auto;" aria-label="Default select example" id="select">
+                    <option value="1"><b>nom</b></option>
+                    <option value="2"><b>prenom</b></option>
+                    <option value="3"><b>matricule</b></option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="data pt-5 mt-5">
+        <table class="table table-bordered" id="tab">
+            <tr class="tab-pane text-center text-white" style="background-color: orange;">
+                <th id="nj">
+                    Nom
+                </th>
+                <th>
+                    Prenom
+                </th>
+                <th>
+                    Matricule
+                </th>
+                <th>
+                    Direction
+                </th>
+                <th>
+                    Medaille
+                </th>
+                <th>
+                    Date Remise
+                </th>
+                
+                <th id="rj">
+                    Gratification
+                </th>
+            </tr>
+
+        </table>
+    </div>
+
+    
+
+  
+ <script src="gratification.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="profile.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <title>Document</title>
+</head>
+<body style="background-color: aliceblue;">
+        <div class="back" class="back" id="back">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <header class="header">
+            <h2>Personal Information :</h2>
+        </header>
+        <main>
+            <div class="profile-container">
+                <img src="sonatrach/sonatrach5.jpg" class="profile-picture">
+               
+                <div class="info-container">
+                    
+                    <ul>
+                        <li><strong>Nom :</strong> <span class="t" id="info_fullname">Sam Links</span></li>
+                        <li><strong>Prenom :</strong> <span class="t" id="info_prenom">Sam Links</span></li>
+                        <li><strong>Email :</strong> <span class="t" id="info_email">Sam Links</span></li>
+                        <li><strong>Direction :</strong> <span class="t" id="info_direction">Sam Links</span></li>
+
+                        <li><strong>Matricule :</strong> &nbsp;<span class="t" id="info_matricule">123456</span></li>
+                        <li><strong>Numéro de compte :</strong>&nbsp; <span class="t" id="info_num_compte">789012345</span></li>
+                        <li><strong>Code structure :</strong>&nbsp;<span class="t" id="info_code_structure">789012345</span></li>
+                        <li><strong>Fonction :</strong>&nbsp;<span class="t" id="info_fonction">789012345</span></li>
+                        <li><strong>Date de néssance:</strong>&nbsp;<span class="t" id="info_date_naissance">2024-02-28</span></li>
+                        <li><strong>Date d'inscription:</strong>&nbsp;<span class="t" id="info_date_recrutement">2024-02-28</span></li>
+
+                    </ul>
+                    
+                </div>
+                <div class="action-buttons">
+                    <button class="edit-profile-button" id="modifier">Modifier&nbsp;&nbsp;<i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="remove-profile-button" id="supprimer">Archiver&nbsp;&nbsp;<i class="fa-solid fa-archive"></i></button>
+
+                </div>
+            </div>
+            <div class="header">
+                <h2>Les Medailles :</h2>
+                <div class="tabley">
+                    <table class="table-t" id="tab_medailles">
+                        <tr>
+                            <th class="bord-right bord-bottom">Medaille Type</th>
+                            <th class="bord-right bord-bottom">Date de Remise</th>
+                            <th class="bord-right bord-bottom">Date prevu</th>
+                            <th class="bord-bottom">Status</th>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+
+            <div class="header">
+                <h2>Les Conges :</h2>
+                <div class="tabley">
+                    <table class="table-t" id="tab_conges">
+                        <tr>
+                            <th class="bord-right bord-bottom">Conges Type</th>
+                            <th class="bord-right bord-bottom">Date de Debut</th>
+                            <th class="bord-right bord-bottom">Date de Fin</th>
+                            <th class="bord-bottom bord-right">Validité</th>
+                            <th class="bord-bottom">Duree</th>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+
+            
+        </main>
+        <footer>
+
+        </footer>
+
+        <div class="dialog" id="dialog">
+            <div class="col-lg-6 mt-5 content" id="contu">
+                <h3 style="text-align: center;margin-top: 0.3cm;">Modification</h3>
+                <div style="display: flex;flex-direction:column;margin-top: 0.3cm;">
+                    <div class="form-row justify-content-sm-around">
+                        <div class="form-group" style="width: 46%;">
+                            <label for="nom" >Nom:</label>
+                            <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom">
+                        </div>
+                        <div class="form-group "  style="width: 46%;">
+                            <label for="prenom">Prénom:</label>
+                            <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom">
+                        </div>
+                    </div>
+
+
+                    <div class="form-row justify-content-sm-around">
+                        <div class="form-group"  style="width: 46%;">
+                            <label for="matricule">Email:</label>
+                            <input type="text" class="form-control" id="email" placeholder="Entrez votre matricule">
+                        </div>
+                        <div class="form-group"  style="width: 46%;">
+                            <label for="numero_compte">Direction:</label>
+                            <select class="form-control" style="padding-right: 10px;cursor: pointer;" id="direction">
+                                <option value="SONATRACH IAP">SONATRACH IAP</option>
+                                <option value="BOUZITOUNI MERIEM">BOUZITOUNI MERIEM</option>
+                                <option value="BENLAKHAL SAMIR">BENLAKHAL SAMIR</option>
+                                <option value="FEKRAOUI BADIS">FEKRAOUI BADIS</option>
+                                <option value="DJEMAI ABDELHAFID">DJEMAI ABDELHAFID</option>
+                                <option value="BOUZZA KRACHAI HALIMA">BOUZZA KRACHAI HALIMA</option>
+                                <option value="AZIL TAWFIK">AZIL TAWFIK</option>
+                                <option value="BOUANZOUL MOHAMED">BOUANZOUL MOHAMED</option>
+                                <option value="KERCHOUCHE HABIBA">KERCHOUCHE HABIBA</option>
+                                <option value="RAITS ALI">RAITS ALI</option>
+                                <option value="MAHFOUDI AHMED">MAHFOUDI AHMED</option>
+                              </select>
+                        </div>
+                        </div>
+
+
+                    <div class="form-row justify-content-sm-around">
+                    <div class="form-group"  style="width: 46%;">
+                        <label for="matricule">Matricule:</label>
+                        <input type="text" class="form-control" id="matricule" placeholder="Entrez votre matricule">
+                    </div>
+                    <div class="form-group"  style="width: 46%;">
+                        <label for="numero_compte">Numéro de compte:</label>
+                        <input type="text" class="form-control" id="numero_compte" placeholder="Entrez numéro de compte">
+                    </div>
+                    </div>
+                    <div class="form-row justify-content-sm-around">
+                    <div class="form-group"  style="width: 46%;" >
+                        <label for="code_structure">Code structure:</label>
+                        <input type="text" class="form-control" id="code_structure" placeholder="Entrez code structure">
+                    </div>
+
+                    <div class="form-group"  style="width: 46%;">
+                        <label for="code_structure">Fonction:</label>
+                        <input type="text" class="form-control" id="fonction" placeholder="Entrez fonction">
+                    </div>
+                    </div>
+                    <div class="form-row justify-content-sm-around">
+                        <div class="form-group" style="width: 46%;">
+                        <label for="date_naissance">Date de naissance:</label>
+                        <input type="date" class="form-control" id="date_naissance">
+                    </div>
+                    <div class="form-group" style="width: 46%;">
+                        <label for="date_recrutement">Date de recrutement:</label>
+                        <input type="date" class="form-control" id="date_recrutement">
+                    </div>
+                    </div>
+                    
+                    <div class="row justify-content-around mt-md-3">
+                        <button class="btn btn-outline-secondary" style="width: 45%;color: aliceblue;" id="annuller_modifier">Anuller</button>
+                        <button class="btn btn-success" style="width: 45%;" id="set_modifier">Modifier</button>
+                    </div>
+                </form>
+            </div>
+         </div></div>
+
+         <div class="dialog2" id="dialog2">
+            <div class="content" id="conta">
+                <h3 id="arc">Archiver</h3>
+                <h4 style="margin-top: 0.3cm;font-weight: 400;" id="alrt"> </h4>
+                <div class="row justify-content-around mt-4">
+                    <button class="btn btn-outline-light" style="width: 45%;" id="annuller_supprimer">Anuller</button>
+                    <button class="btn btn-success" id="set_supprime" style="width: 45%;;border: none;outline: none;" >Archiver</button>
+                   
+                </div>
+            </div>
+         </div>
+    <script src="profile.js"></script>
+    </body>
+    
+     
+</html>

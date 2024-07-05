@@ -1,0 +1,65 @@
+<? php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Search Page</title>
+ <link rel="stylesheet" href="recherche.css">
+</head>
+<body>
+
+  <!-- Search Section -->
+ 
+  <div class="container-fluid fixed-search">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="input-group mb-3 ">
+                <input type="text" class="form-control" placeholder="Search for something..." aria-label="Search" aria-describedby="button-search" id="search">
+                <button class="btn btn-dark" style="background-color: orange;color: white;" type="button" id="button-search">Search</button>
+            </div>
+        </div>
+
+        <div class="col-md-4 filtre-container">
+            <div id="filtre">
+                <i class="fas fa-sliders" style="color: grey;padding-top: 0.29cm;"></i>
+                <b style="font-size: 20px;color: grey;margin-left: 0.2cm;">filtrer par</b>
+            </div>
+
+            <select class="filtre" style="width:auto;" aria-label="Default select example" id="select">
+                <option value="1"><b>nom</b></option>
+                <option value="2"><b>prenom</b></option>
+                <option value="3"><b>matricule</b></option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="container col-md-12 mt-5 bottom-head" style="display: flex;margin-top: 4cm;width: 100%;justify-content: center;">
+    <div class="row" id="container" style="justify-content: space-between;width: 100%;">
+   
+    </div>
+</div>
+
+  <div class="col-6 mb-md-2 ps-5" id="employee" style="display: none;">
+    <div class="card" id="cerd">
+      <div class="card-body" >
+        
+        <b style="color: #fcb10f;" >nom : </b><b id="nom"></b>
+        <br>
+        <b style="color: #fcb10f;" >prenom : </b><b id="prenom"></b>
+        <br>
+        <b style="color: #fcb10f;" >matricule : </b><b id="matricule"></b>
+        <br>
+        <br>
+        <button class="btn btn-warning w-100" id="go" style="background-color: orange;color: white;"><b>voir le profile</b> &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+      </div>
+    </div>
+  </div> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="recherche.js"></script>
+</body>
+</html>

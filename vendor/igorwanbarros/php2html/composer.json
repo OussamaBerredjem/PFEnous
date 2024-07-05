@@ -1,0 +1,20 @@
+{
+    "name": "igorwanbarros/php2html",
+    "description": "library aimed at creating PHP objects responsible for manipulating information and print them as HTML elements.",
+    "type": "library",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Wanderley",
+            "email": "igorwanbarros@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Igorwanbarros\\Php2Html\\": "src/"
+        }
+    }
+}

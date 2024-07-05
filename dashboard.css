@@ -1,0 +1,167 @@
+
+ 
+
+  img {
+    display: inline-block;
+    vertical-align: middle; 
+  }
+  
+  h2 {
+    display: inline-block;
+    
+    vertical-align: middle; 
+  }
+  :root {
+    --main-bg-color: rgb(205, 205, 205);
+    --main-text-color: rgb(255, 255, 255);
+    --second-text-color: rgb(189, 189, 146);
+    --second-bg-color: rgb(251, 251, 251);
+  }
+
+  .list-group-item:hover{
+    color:rgb(201, 201, 200);
+  }
+  
+  .primary-text {
+    color: var(--main-text-color);
+  }
+  
+  .second-text {
+    color: var(--second-text-color);
+  }
+  
+  .primary-bg {
+    background-color: var(--main-bg-color);
+  }
+  
+  .secondary-bg {
+    background-color: var(--second-bg-color);
+  }
+  
+  .rounded-full {
+    border-radius: 100%;
+  }
+  
+  #wrapper {
+    overflow-x: hidden;
+    background-color: rgb(56, 55, 55);
+  }
+  
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+    transition: margin 0.25s ease-out;
+  }
+
+  a{
+    cursor: pointer;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.2rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100%;
+    width: 100%;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  #menu-toggle {
+    cursor: pointer;
+  }
+  
+  .list-group-item {
+    border: none;
+    padding: 13px 30px;
+  }
+  
+  .list-group-item.active {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: none;
+  }
+  
+  
+ 
+  
+::-webkit-scrollbar{
+  width: 0px;
+}
+  
+  
+  
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  
+  }
+
+.fwa{
+  color: white;
+  font-weight: bold;
+}
+
+.fga{
+  color: gold;
+  font-weight: bold;
+}
+
+.selected{
+  color: #f1f1f1;
+  background-color: #575555;
+}
+
+ /* Dropdown button */
+ .dropdown {
+  position: relative; /* Needed for menu positioning */
+}
+
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute; /* Position relative to the button */
+  background-color: #fff; /* Menu background color */
+  margin: 0px 5%;
+  min-width: 90%; /* Minimum width for the menu */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.dropdown.show .dropdown-menu { /* Styles when menu is shown */
+  display: block;
+}
+
+.dropdown-item {
+  padding: 0.3rem 1rem; /* Padding for menu items */
+
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+}
+
+.dropdown-item:hover { /* Hover effect for menu items */
+  background-color: #989595;
+  color: white;
+}
