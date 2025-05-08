@@ -46,7 +46,7 @@ function Send($emails,$medaille){
         $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
         $mail->Username   = 'berredjem.oussama.mi@gmail.com';          // SMTP username
-        $mail->Password   = 'engz lqyj xctk wwgl';                    // SMTP password (use an app-specific password if 2FA is enabled)
+        $mail->Password   = '';                    // SMTP password (use an app-specific password if 2FA is enabled)
         $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption
         $mail->Port       = 587;                                    // TCP port to connect to
 
